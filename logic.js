@@ -1,3 +1,6 @@
+/****************************
+ * Base Example
+
 const johnMass = [92, 85];
 const johnHeight = [1.95, 1.76];
 
@@ -29,3 +32,6 @@ if (johnBMI02 > markBMI02) {
     `Mark's BMI ${markBMI02} is higher than John's BMI ${johnBMI02}!`
   );
 }
+
+
+*/
