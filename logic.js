@@ -1,3 +1,25 @@
+/*********************
+ * BMI Calculator Settings
+Parameters:
+4-5 rows
+Gender
+Height(mts)(cm)
+Weight(kg)
+Age
+Button
+
+Result:
+Underweight (Nv.1-2)
+Normal
+Sobrepeso
+Obeso
+Peso recomendado
+Texto
+
+Formulas: 
+
+ */
+
 /****************************
  * Base Example
 
