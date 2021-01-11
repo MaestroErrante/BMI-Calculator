@@ -8,6 +8,7 @@
 
 html,
 body {
+  display: flex;
   color: #ffffff;
   font-family: "PT Serif", serif;
   background: #171b1c;
@@ -15,4 +16,19 @@ body {
   justify-content: center;
   padding: 50px;
   height: 100vh;
+}
+
+.main__card {
+  height: 400px;
+  width: 530px;
+}
+
+h1 {
+  font-size: 50px;
+  color: azure;
+}
+
+.message {
+  font-size: 15px;
+  color: azure;
 }
