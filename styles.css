@@ -33,6 +33,22 @@ h1 {
   display: flex;
 }
 
+.kg__card {
+  width: 50%;
+}
+
+.weight {
+  width: 100%;
+}
+
+.age__card {
+  width: 50%;
+}
+
+.age {
+  width: 100%;
+}
+
 .message {
   font-size: 15px;
   color: azure;
