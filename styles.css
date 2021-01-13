@@ -24,11 +24,44 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 35px;
   color: azure;
+  text-align: center;
+}
+
+.firstRow {
+  display: flex;
 }
 
 .message {
   font-size: 15px;
   color: azure;
+  text-align: center;
+}
+
+.height {
+  width: 100%;
+}
+
+.thirdRow {
+  display: flex;
+  text-align: center;
+}
+
+.genderMale {
+  width: 50%;
+  font-size: 40px;
+}
+
+.genderFemale {
+  width: 50%;
+  font-size: 40px;
+}
+
+.buttonBlock {
+  text-align: center;
+}
+
+.button {
+  font-size: 15px;
 }
