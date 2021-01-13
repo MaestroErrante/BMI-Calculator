@@ -16,26 +16,35 @@
     <figure clas="main__card">
       <h1>BMI Calculator</h1>
       <hr></hr>
-      <div class="kg__card">
-        <input type="number" class="weight"/>
-        <p class="message">Weight(kg)</p>
+      <div class="firstRow">
+        <div class="kg__card">
+          <input type="number" class="weight"/>
+          <p class="message">Weight(kg)</p>
+        </div>
+        <div class="age__card">
+          <input type="number" class="age"/>
+          <p class="message">Age</p>
+        </div>
       </div>
-      <div class="age__card">
-        <input type="number" class="age"/>
-        <p class="message">Age</p>
+      <div class="secondRow">
+        <div class="height__card">
+          <input type="number" class="height"/>
+          <p class="message">Height(cm)</p>
+        </div>
       </div>
-      <div class="height__card">
-        <input type="number" class="height"/>
-        <p class="message">Height(cm)</p>
-      </div>
-      <br></br>
-      <span class="icon"><i class="fa fa-mars"></i>
-        <p class="message">Male</p>
-      </span>
-      <span class="icon"><i class="fa fa-venus"></i>
-        <p class="message">Female</p>
-      </span>
-      
+      <div class="thirdRow">
+        <div class="genderMale">
+          <span class="icon"><i class="fa fa-mars"></i>
+          <p class="message">Male</p>
+      </span></div>
+        <div class="genderFemale">      
+          <span class="icon"><i class="fa fa-venus"></i>
+          <p class="message">Female</p>
+      </span></div>
+    </div>
+    <div class="buttonBlock">
+      <button type="button" class="button">Click Me!</button>
+    </div>
     </figure>
   </body>
 </html>
