@@ -16,11 +16,18 @@ body {
   justify-content: center;
   padding: 50px;
   height: 100vh;
+  border-style: solid;
+  border-color: rgb(39, 204, 75);
 }
 
 .main__card {
-  height: 400px;
-  width: 530px;
+  background-color: rgb(2, 1, 63);
+  margin-left: auto;
+  margin-right: auto;
+  height: 610px;
+  width: 400px;
+  border-style: solid;
+  border-color: red;
 }
 
 h1 {
