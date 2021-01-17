@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: solid 1px rgb(248, 3, 3);
 }
 
 html,
@@ -16,8 +17,6 @@ body {
   justify-content: center;
   padding: 50px;
   height: 100vh;
-  border-style: solid;
-  border-color: rgb(39, 204, 75);
 }
 
 .main__card {
@@ -27,8 +26,6 @@ body {
   height: 600px;
   position: relative;
   width: 400px;
-  border-style: solid;
-  border-color: red;
 }
 
 h1 {
@@ -37,8 +34,9 @@ h1 {
   text-align: center;
 }
 
-.firstRow {
+.measurementsBlock {
   display: flex;
+  text-align: center;
 }
 
 .kg__card {
