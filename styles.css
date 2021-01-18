@@ -37,6 +37,7 @@ h1 {
 .measurementsBlock {
   display: flex;
   text-align: center;
+  width: 100%;
 }
 
 .kg__card {
@@ -71,7 +72,7 @@ h1 {
   width: 100%;
   text-align: center;
   position: relative;
-  top: 28%;
+  top: 30%;
   height: 100%;
 }
 
