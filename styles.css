@@ -3,8 +3,6 @@
 * {
   margin: 0;
   padding: 0;
-  border: solid 1px;
-  border-color: red;
   box-sizing: border-box;
 }
 
@@ -16,17 +14,16 @@ body {
   background: #171b1c;
   align-items: center;
   justify-content: center;
-  padding: 50px;
-  height: auto;
+  height: 100vh;
 }
 
 .main__card {
   background-color: rgb(2, 1, 63);
   margin-left: auto;
   margin-right: auto;
-  height: 600px;
+  height: 37.5rem;
   position: relative;
-  width: 400px;
+  width: 25rem;
 }
 
 h1 {
