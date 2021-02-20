@@ -11,3 +11,4 @@ const answerBtn = document.querySelector(".answerButton");
 userWeight.textContent = 0;
 userAge.textContent = 0;
 userHeight.textContent = 0;
+let gender;
