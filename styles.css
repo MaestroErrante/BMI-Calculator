@@ -114,6 +114,10 @@ h1 {
   bottom: 1px;
 }
 
+.genderClicked {
+  background-color: aqua;
+}
+
 .icon {
   font-size: 100%;
   width: 100%;
