@@ -29,3 +29,5 @@ femaleBtn.addEventListener("click", function () {
     femaleBtn.classList.add("genderClicked");
   }
 });
+
+// Add users input value
