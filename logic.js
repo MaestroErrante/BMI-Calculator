@@ -31,3 +31,6 @@ femaleBtn.addEventListener("click", function () {
 });
 
 // Add users input value
+answerBtn.addEventListener("click", function () {
+  console.log("buttonWorks");
+});
