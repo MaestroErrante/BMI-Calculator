@@ -1,8 +1,8 @@
 "use strict";
 //Selecting Elements
-const userWeight = document.querySelector(".weight");
-const userAge = document.querySelector(".age");
-const userHeight = document.querySelector(".height");
+const userWeight = document.getElementById("weight");
+const userAge = document.getElementById("age");
+const userHeight = document.getElementById("height");
 const maleBtn = document.querySelector(".btnMale");
 const femaleBtn = document.querySelector(".btnFemale");
 const answerBtn = document.querySelector(".answerButton");
