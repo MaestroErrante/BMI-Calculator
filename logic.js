@@ -38,5 +38,15 @@ answerBtn.addEventListener("click", function () {
     let heightMts = userHeight.value / 100;
     let resultBMI = userWeight.value / (heightMts * heightMts);
     console.log(resultBMI.toFixed(1));
+    //Formula to calculate BMI for kids and teens
+  } else if (
+    userWeight.value !== 0 &&
+    userAge.value <= 19 &&
+    userAge.value >= 2 &&
+    userHeight.value !== 0
+  ) {
+    let underageBMI =
+      (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
+    console.log(underageBMI.toFixed(1));
   }
 });
