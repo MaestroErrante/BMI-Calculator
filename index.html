@@ -18,17 +18,20 @@
       <hr></hr>
       <div class="measurementsBlock">
         <label class="kg__card">
-          <input type="number" class="weight" id="weight" placeholder="60" autocomplete="off"/>
+          <input type="number" class="weight" id="weight" placeholder="60" autocomplete="off" onfocus="this.placeholder=''"
+          onblur="this.placeholder='60'" />
           <p class="message">Weight (kg)</p>
         </label>
         <label class="age__card">
-          <input type="number" class="age" id="age" placeholder="18" autocomplete="off"/>
+          <input type="number" class="age" id="age" placeholder="18" autocomplete="off" onfocus="this.placeholder=''"
+          onblur="this.placeholder='18'"/>
           <p class="message">Age</p>
         </label>
       </div>
       <div class="heightBlock">
         <label class="height__card">
-          <input type="number" class="height" id="height" placeholder="150" autocomplete="off"/>
+          <input type="number" class="height" id="height" placeholder="150" autocomplete="off" onfocus="this.placeholder=''"
+          onblur="this.placeholder='150'"/>
           <p class="message">Height (cm)</p>
         </label>
       </div>
