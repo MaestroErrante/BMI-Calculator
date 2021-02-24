@@ -33,4 +33,10 @@ femaleBtn.addEventListener("click", function () {
 // Add users input value
 answerBtn.addEventListener("click", function () {
   console.log(userWeight.value, userAge.value, userHeight.value, gender);
+  //Formula to calculate BMI for adults
+  if (userWeight.value !== 0 && userAge.value >= 20 && userHeight.value !== 0) {
+    let heightMts = userHeight.value / 100;
+    let resultBMI = userWeight.value / (heightMts * heightMts);
+    console.log(resultBMI.toFixed(1));
+  }
 });
