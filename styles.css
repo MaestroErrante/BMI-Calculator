@@ -137,3 +137,14 @@ h1 {
   margin: 0;
   cursor: pointer;
 }
+
+.close-window {
+  position: absolute;
+  top: -1rem;
+  left: 1rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
