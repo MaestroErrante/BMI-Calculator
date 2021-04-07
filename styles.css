@@ -149,6 +149,14 @@ h1 {
   background: none;
 }
 
+.txtResult {
+  position: relative;
+  color: #171b1c;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
 .recalBtn {
   position: absolute;
   top: 33rem;
@@ -163,4 +171,19 @@ h1 {
   display: inline-block;
   margin: 0;
   cursor: pointer;
+}
+
+.results {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 72%;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
