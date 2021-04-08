@@ -6,12 +6,25 @@ const userHeight = document.getElementById("height");
 const maleBtn = document.querySelector(".btnMale");
 const femaleBtn = document.querySelector(".btnFemale");
 const answerBtn = document.querySelector(".answerButton");
+const windowResults = document.querySelector(".resultsWindow");
+const overlay = document.querySelector(".overlay");
 let gender;
 
 //Starting Conditions
 userWeight.textContent = 0;
 userAge.textContent = 0;
 userHeight.textContent = 0;
+
+//Funtions to open and close results window
+const openWindow = function () {
+  windowResults.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+};
+
+const closeWindow = function () {
+  windowResults.classList.add("hidden");
+  overlay.classList.add("hidden");
+};
 
 // Selecting Gender
 maleBtn.addEventListener("click", function () {
@@ -33,6 +46,7 @@ femaleBtn.addEventListener("click", function () {
 // Add users input value
 answerBtn.addEventListener("click", function () {
   console.log(userWeight.value, userAge.value, userHeight.value, gender);
+  openWindow();
   //Formula to calculate BMI for adults
   if (userWeight.value !== 0 && userAge.value >= 20 && userHeight.value !== 0) {
     let heightMts = userHeight.value / 100;
