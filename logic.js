@@ -8,6 +8,7 @@ const femaleBtn = document.querySelector(".btnFemale");
 const answerBtn = document.querySelector(".answerButton");
 const windowResults = document.querySelector(".resultsWindow");
 const overlay = document.querySelector(".overlay");
+const reset = document.querySelector(".close-window");
 let gender;
 
 //Starting Conditions
@@ -63,4 +64,8 @@ answerBtn.addEventListener("click", function () {
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
     console.log(underageBMI.toFixed(1));
   }
+  //Close window
+  reset.addEventListener("click", function () {
+    closeWindow();
+  });
 });
