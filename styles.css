@@ -157,7 +157,11 @@ h1 {
   text-align: center;
 }
 
-.results {
+.hidden {
+  display: none;
+}
+
+.resultsWindow {
   position: absolute;
   top: 48%;
   left: 50%;
