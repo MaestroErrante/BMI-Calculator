@@ -152,25 +152,9 @@ h1 {
 .txtResult {
   position: relative;
   color: #171b1c;
-  top: -20%;
+  top: -15%;
   font-size: 2rem;
   text-align: center;
-}
-
-.recalBtn {
-  position: absolute;
-  top: 33rem;
-  background-color: rgb(0, 255, 255);
-  border: none;
-  color: white;
-  width: 100%;
-  padding: 15px 32px;
-  font-size: 200%;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 0;
-  cursor: pointer;
 }
 
 .results {
@@ -179,7 +163,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
-  height: 72%;
+  height: 90%;
 
   background-color: white;
   padding: 4rem;
