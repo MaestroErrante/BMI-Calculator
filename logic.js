@@ -53,6 +53,10 @@ answerBtn.addEventListener("click", function () {
     let heightMts = userHeight.value / 100;
     let resultBMI = userWeight.value / (heightMts * heightMts);
     console.log(resultBMI.toFixed(1));
+    //Display result
+    let displayResult = document.createElement("P");
+    displayResult.innerHTML = `${resultBMI.toFixed(0)}`;
+    document.querySelector(".resultsWindow").appendChild(displayResult);
     //Formula to calculate BMI for kids and teens
   } else if (
     userWeight.value !== 0 &&
@@ -63,6 +67,10 @@ answerBtn.addEventListener("click", function () {
     let underageBMI =
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
     console.log(underageBMI.toFixed(1));
+    //Display result
+    let displayResult = document.createElement("P");
+    displayResult.innerHTML = `${underageBMI.toFixed(0)}th`;
+    document.querySelector(".resultsWindow").appendChild(displayResult);
   }
   //Close window
   reset.addEventListener("click", function () {
