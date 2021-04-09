@@ -66,6 +66,10 @@ answerBtn.addEventListener("click", function () {
       displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
       document.querySelector(".resultsWindow").appendChild(displayResult);
       //Display description
+      let description = document.createElement("H4");
+      description.innerHTML = `${"You have an underweight body weight."}`;
+      description.style.color = "black";
+      document.querySelector(".resultsWindow").appendChild(description);
     }
 
     //Formula to calculate BMI for kids and teens
