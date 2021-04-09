@@ -56,13 +56,16 @@ answerBtn.addEventListener("click", function () {
     console.log(resultBMI.toFixed(1));
     // Selecting ranges and display result
     if (resultBMI < 18.5) {
+      //Display range underweight
       let underWeight = document.createElement("H2");
       underWeight.innerHTML = "Underweight";
       underWeight.style.color = "#E81D58";
       document.querySelector(".resultsWindow").appendChild(underWeight);
+      //Display number result
       let displayResult = document.createElement("H3");
       displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
       document.querySelector(".resultsWindow").appendChild(displayResult);
+      //Display description
     }
 
     //Formula to calculate BMI for kids and teens
