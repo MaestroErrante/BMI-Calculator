@@ -56,36 +56,43 @@ answerBtn.addEventListener("click", function () {
     let resultBMI = userWeight.value / (heightMts * heightMts);
     console.log(resultBMI.toFixed(1));
     // Selecting ranges and display result
+    //Underweight range
     if (resultBMI < 18.5) {
       range = "Underweight";
       descrResult = "Add here a description of the results and tips to improve";
-      //Create function to display results
-      function funcResults() {
-        //Display range underweight
-        let underWeight = document.createElement("H2");
-        underWeight.innerHTML = `${range}`;
-        underWeight.style.color = "#E81D58";
-        document.querySelector(".resultsWindow").appendChild(underWeight);
-        //Display number result
-        let displayResult = document.createElement("H3");
-        displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
-        document.querySelector(".resultsWindow").appendChild(displayResult);
-        //Display description
-        let description = document.createElement("H4");
-        description.innerHTML = `${descrResult}`;
-        description.style.color = "black";
-        document.querySelector(".resultsWindow").appendChild(description);
-        //Display More Info with link
-        let moreInfo = document.createElement("P");
-        moreInfo.innerHTML = `For more information click here: `;
-        moreInfo.classList.add("externalInfo");
-        document.querySelector(".resultsWindow").appendChild(moreInfo);
-        let extSrc = document.createElement("a");
-        extSrc.setAttribute("href", "google.com");
-        extSrc.innerHTML = "google.com";
-        document.querySelector(".externalInfo").appendChild(extSrc);
-      }
       funcResults();
+      //Healthy range
+    } else if (resultBMI > 18.5 && resultBMI < 25) {
+      range = "Healthy Weight";
+      descrResult = "This is the description for the result of healthy weight";
+      funcResults();
+    }
+
+    //Create function to display results
+    function funcResults() {
+      //Display range underweight
+      let underWeight = document.createElement("H2");
+      underWeight.innerHTML = `${range}`;
+      underWeight.style.color = "#E81D58";
+      document.querySelector(".resultsWindow").appendChild(underWeight);
+      //Display number result
+      let displayResult = document.createElement("H3");
+      displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
+      document.querySelector(".resultsWindow").appendChild(displayResult);
+      //Display description
+      let description = document.createElement("H4");
+      description.innerHTML = `${descrResult}`;
+      description.style.color = "black";
+      document.querySelector(".resultsWindow").appendChild(description);
+      //Display More Info with link
+      let moreInfo = document.createElement("P");
+      moreInfo.innerHTML = `For more information click here: `;
+      moreInfo.classList.add("externalInfo");
+      document.querySelector(".resultsWindow").appendChild(moreInfo);
+      let extSrc = document.createElement("a");
+      extSrc.setAttribute("href", "google.com");
+      extSrc.innerHTML = "google.com";
+      document.querySelector(".externalInfo").appendChild(extSrc);
     }
 
     //Formula to calculate BMI for kids and teens
@@ -103,6 +110,7 @@ answerBtn.addEventListener("click", function () {
     displayResult.innerHTML = `${underageBMI.toFixed(0)}th`;
     document.querySelector(".resultsWindow").appendChild(displayResult);
   }
+
   //Close window
   reset.addEventListener("click", function () {
     closeWindow();
