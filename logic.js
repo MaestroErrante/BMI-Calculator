@@ -70,6 +70,15 @@ answerBtn.addEventListener("click", function () {
       description.innerHTML = `${"You have an underweight body weight."}`;
       description.style.color = "black";
       document.querySelector(".resultsWindow").appendChild(description);
+      //Display More Info with link
+      let moreInfo = document.createElement("P");
+      moreInfo.innerHTML = `For more information click here: `;
+      moreInfo.classList.add("externalInfo");
+      document.querySelector(".resultsWindow").appendChild(moreInfo);
+      let extSrc = document.createElement("a");
+      extSrc.setAttribute("href", "google.com");
+      extSrc.innerHTML = "google.com";
+      document.querySelector(".externalInfo").appendChild(extSrc);
     }
 
     //Formula to calculate BMI for kids and teens
