@@ -11,6 +11,7 @@ const overlay = document.querySelector(".overlay");
 const reset = document.querySelector(".close-window");
 let gender;
 let range;
+let descrResult;
 
 //Starting Conditions
 userWeight.textContent = 0;
@@ -57,6 +58,8 @@ answerBtn.addEventListener("click", function () {
     // Selecting ranges and display result
     if (resultBMI < 18.5) {
       range = "Underweight";
+      descrResult = "Add here a description of the results and tips to improve";
+      //Create function to display results
       function funcResults() {
         //Display range underweight
         let underWeight = document.createElement("H2");
@@ -69,7 +72,7 @@ answerBtn.addEventListener("click", function () {
         document.querySelector(".resultsWindow").appendChild(displayResult);
         //Display description
         let description = document.createElement("H4");
-        description.innerHTML = `${"Add here a description of the results and tips to improve"}`;
+        description.innerHTML = `${descrResult}`;
         description.style.color = "black";
         document.querySelector(".resultsWindow").appendChild(description);
         //Display More Info with link
