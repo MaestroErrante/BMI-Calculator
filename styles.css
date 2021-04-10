@@ -37,7 +37,7 @@ h2 {
   color: rgb(0, 0, 0);
   text-align: center;
   position: relative;
-  top: 8%;
+  top: 10%;
 }
 
 h3 {
@@ -45,13 +45,21 @@ h3 {
   color: rgb(0, 0, 0);
   text-align: center;
   position: relative;
-  top: 13%;
+  top: 15%;
 }
 
 h4 {
   text-align: center;
   position: relative;
-  top: 25%;
+  top: 22%;
+}
+
+.externalInfo {
+  position: relative;
+  font-size: 0.7rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  top: 40%;
 }
 
 .measurementsBlock {
