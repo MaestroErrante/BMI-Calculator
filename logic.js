@@ -69,7 +69,7 @@ answerBtn.addEventListener("click", function () {
         document.querySelector(".resultsWindow").appendChild(displayResult);
         //Display description
         let description = document.createElement("H4");
-        description.innerHTML = `${"You have an underweight body weight."}`;
+        description.innerHTML = `${"Add here a description of the results and tips to improve"}`;
         description.style.color = "black";
         document.querySelector(".resultsWindow").appendChild(description);
         //Display More Info with link
