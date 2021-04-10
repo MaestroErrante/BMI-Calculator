@@ -56,29 +56,33 @@ answerBtn.addEventListener("click", function () {
     console.log(resultBMI.toFixed(1));
     // Selecting ranges and display result
     if (resultBMI < 18.5) {
-      //Display range underweight
-      let underWeight = document.createElement("H2");
-      underWeight.innerHTML = "Underweight";
-      underWeight.style.color = "#E81D58";
-      document.querySelector(".resultsWindow").appendChild(underWeight);
-      //Display number result
-      let displayResult = document.createElement("H3");
-      displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
-      document.querySelector(".resultsWindow").appendChild(displayResult);
-      //Display description
-      let description = document.createElement("H4");
-      description.innerHTML = `${"You have an underweight body weight."}`;
-      description.style.color = "black";
-      document.querySelector(".resultsWindow").appendChild(description);
-      //Display More Info with link
-      let moreInfo = document.createElement("P");
-      moreInfo.innerHTML = `For more information click here: `;
-      moreInfo.classList.add("externalInfo");
-      document.querySelector(".resultsWindow").appendChild(moreInfo);
-      let extSrc = document.createElement("a");
-      extSrc.setAttribute("href", "google.com");
-      extSrc.innerHTML = "google.com";
-      document.querySelector(".externalInfo").appendChild(extSrc);
+      range = "Underweight";
+      function funcResults() {
+        //Display range underweight
+        let underWeight = document.createElement("H2");
+        underWeight.innerHTML = `${range}`;
+        underWeight.style.color = "#E81D58";
+        document.querySelector(".resultsWindow").appendChild(underWeight);
+        //Display number result
+        let displayResult = document.createElement("H3");
+        displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
+        document.querySelector(".resultsWindow").appendChild(displayResult);
+        //Display description
+        let description = document.createElement("H4");
+        description.innerHTML = `${"You have an underweight body weight."}`;
+        description.style.color = "black";
+        document.querySelector(".resultsWindow").appendChild(description);
+        //Display More Info with link
+        let moreInfo = document.createElement("P");
+        moreInfo.innerHTML = `For more information click here: `;
+        moreInfo.classList.add("externalInfo");
+        document.querySelector(".resultsWindow").appendChild(moreInfo);
+        let extSrc = document.createElement("a");
+        extSrc.setAttribute("href", "google.com");
+        extSrc.innerHTML = "google.com";
+        document.querySelector(".externalInfo").appendChild(extSrc);
+      }
+      funcResults();
     }
 
     //Formula to calculate BMI for kids and teens
