@@ -11,6 +11,7 @@ const overlay = document.querySelector(".overlay");
 const reset = document.querySelector(".close-window");
 let gender;
 let range;
+let rangeResult;
 let descrResult;
 
 //Starting Conditions
@@ -66,15 +67,25 @@ answerBtn.addEventListener("click", function () {
       range = "Healthy Weight";
       descrResult = "This is the description for the result of healthy weight";
       funcResults();
+      //Overweight range
+    } else if (resultBMI > 25 && resultBMI < 30) {
+      range = "Overweight";
+      descrResult = "This is the description for the result of overweight";
+      funcResults();
+      //Obese range
+    } else if (resultBMI > 30) {
+      range = "Obese";
+      descrResult = "This is the description for the result of obese";
+      funcResults();
     }
 
     //Create function to display results
     function funcResults() {
       //Display range underweight
-      let underWeight = document.createElement("H2");
-      underWeight.innerHTML = `${range}`;
-      underWeight.style.color = "#E81D58";
-      document.querySelector(".resultsWindow").appendChild(underWeight);
+      rangeResult = document.createElement("H2");
+      rangeResult.innerHTML = `${range}`;
+      rangeResult.style.color = "#E81D58";
+      document.querySelector(".resultsWindow").appendChild(rangeResult);
       //Display number result
       let displayResult = document.createElement("H3");
       displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
