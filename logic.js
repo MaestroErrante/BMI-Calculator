@@ -20,17 +20,10 @@ userWeight.textContent = 0;
 userAge.textContent = 0;
 userHeight.textContent = 0;
 
-//Funtions to open and close results window
+//Funtions to open window
 const openWindow = function () {
   windowResults.classList.remove("hidden");
   overlay.classList.remove("hidden");
-};
-
-const closeWindow = function () {
-  windowResults.classList.add("hidden");
-  overlay.classList.add("hidden");
-  //reset Conditions
-  inputs.forEach((input) => (input.value = ""));
 };
 
 // Selecting Gender
@@ -125,6 +118,18 @@ answerBtn.addEventListener("click", function () {
     document.querySelector(".resultsWindow").appendChild(displayResult);
   }
 });
+
+const closeWindow = function () {
+  windowResults.classList.add("hidden");
+  overlay.classList.add("hidden");
+  //reset Conditions
+  inputs.forEach((input) => (input.value = ""));
+  gender == "male"
+    ? maleBtn.classList.remove("genderClicked")
+    : femaleBtn.classList.remove("genderClicked");
+  gender = "";
+  funcResults = undefined;
+};
 
 //Close window
 reset.addEventListener("click", function () {
