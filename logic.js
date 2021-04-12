@@ -9,6 +9,7 @@ const answerBtn = document.querySelector(".answerButton");
 const windowResults = document.querySelector(".resultsWindow");
 const overlay = document.querySelector(".overlay");
 const reset = document.querySelector(".close-window");
+let inputs = document.querySelectorAll("input");
 let gender;
 let range;
 let rangeResult;
@@ -28,6 +29,8 @@ const openWindow = function () {
 const closeWindow = function () {
   windowResults.classList.add("hidden");
   overlay.classList.add("hidden");
+  //reset Conditions
+  inputs.forEach((input) => (input.value = ""));
 };
 
 // Selecting Gender
@@ -121,9 +124,9 @@ answerBtn.addEventListener("click", function () {
     displayResult.innerHTML = `${underageBMI.toFixed(0)}th`;
     document.querySelector(".resultsWindow").appendChild(displayResult);
   }
+});
 
-  //Close window
-  reset.addEventListener("click", function () {
-    closeWindow();
-  });
+//Close window
+reset.addEventListener("click", function () {
+  closeWindow();
 });
