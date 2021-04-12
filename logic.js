@@ -12,6 +12,10 @@ const reset = document.querySelector(".close-window");
 let inputs = document.querySelectorAll("input");
 let gender;
 let range;
+let displayResult;
+let description;
+let moreInfo;
+let extSrc;
 let rangeResult;
 let descrResult;
 
@@ -77,28 +81,34 @@ answerBtn.addEventListener("click", function () {
 
     //Create function to display results
     function funcResults() {
-      //Display range underweight
+      //Set range underweight
       rangeResult = document.createElement("H2");
       rangeResult.innerHTML = `${range}`;
       rangeResult.style.color = "#E81D58";
-      document.querySelector(".resultsWindow").appendChild(rangeResult);
-      //Display number result
-      let displayResult = document.createElement("H3");
+
+      //Set number result
+      displayResult = document.createElement("H3");
       displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
-      document.querySelector(".resultsWindow").appendChild(displayResult);
-      //Display description
-      let description = document.createElement("H4");
+
+      //Set description
+      description = document.createElement("H4");
       description.innerHTML = `${descrResult}`;
       description.style.color = "black";
-      document.querySelector(".resultsWindow").appendChild(description);
-      //Display More Info with link
-      let moreInfo = document.createElement("P");
+
+      //Set More Info with link
+      moreInfo = document.createElement("P");
       moreInfo.innerHTML = `For more information click here: `;
       moreInfo.classList.add("externalInfo");
-      document.querySelector(".resultsWindow").appendChild(moreInfo);
-      let extSrc = document.createElement("a");
+
+      extSrc = document.createElement("a");
       extSrc.setAttribute("href", "google.com");
       extSrc.innerHTML = "google.com";
+
+      //Display results
+      document.querySelector(".resultsWindow").appendChild(rangeResult);
+      document.querySelector(".resultsWindow").appendChild(displayResult);
+      document.querySelector(".resultsWindow").appendChild(description);
+      document.querySelector(".resultsWindow").appendChild(moreInfo);
       document.querySelector(".externalInfo").appendChild(extSrc);
     }
 
@@ -122,13 +132,17 @@ answerBtn.addEventListener("click", function () {
 const closeWindow = function () {
   windowResults.classList.add("hidden");
   overlay.classList.add("hidden");
-  //reset Conditions
+  //Reset Conditions
   inputs.forEach((input) => (input.value = ""));
   gender == "male"
     ? maleBtn.classList.remove("genderClicked")
     : femaleBtn.classList.remove("genderClicked");
   gender = "";
-  funcResults = undefined;
+  rangeResult.remove("H2");
+  displayResult.remove("H3");
+  description.remove("H4");
+  moreInfo.remove("p");
+  extSrc.remove("a");
 };
 
 //Close window
