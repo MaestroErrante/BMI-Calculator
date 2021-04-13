@@ -99,7 +99,7 @@ answerBtn.addEventListener("click", function () {
       moreInfo = document.createElement("P");
       moreInfo.innerHTML = `For more information click here: `;
       moreInfo.classList.add("externalInfo");
-
+      //Set Link
       extSrc = document.createElement("a");
       extSrc.setAttribute("href", "google.com");
       extSrc.innerHTML = "google.com";
@@ -123,7 +123,7 @@ answerBtn.addEventListener("click", function () {
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
     console.log(underageBMI.toFixed(1));
     //Display result
-    let displayResult = document.createElement("H2");
+    displayResult = document.createElement("H3");
     displayResult.innerHTML = `${underageBMI.toFixed(0)}th`;
     document.querySelector(".resultsWindow").appendChild(displayResult);
   }
