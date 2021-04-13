@@ -57,7 +57,7 @@ answerBtn.addEventListener("click", function () {
   if (userWeight.value !== 0 && userAge.value >= 20 && userHeight.value !== 0) {
     heightMts = userHeight.value / 100;
     resultBMI = userWeight.value / (heightMts * heightMts);
-    console.log(resultBMI.toFixed(1));
+    console.log(resultBMI.toFixed(0));
     // Selecting ranges and display result
     //Underweight range
     if (resultBMI < 18.5) {
@@ -90,10 +90,13 @@ answerBtn.addEventListener("click", function () {
   ) {
     resultBMI =
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
-    console.log(resultBMI.toFixed(1));
+    console.log(resultBMI.toFixed(0));
 
     if (resultBMI < 5) {
       range = "Underweight";
+      funcResults();
+    } else if (resultBMI > 5 && resultBMI < 85) {
+      range = "Healthy weight";
       funcResults();
     }
   }
