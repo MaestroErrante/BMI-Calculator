@@ -168,6 +168,11 @@ h4 {
   cursor: pointer;
 }
 
+.answerButton:focus {
+  border: none;
+  outline: none;
+}
+
 .close-window {
   position: absolute;
   top: -1rem;
