@@ -86,7 +86,8 @@ answerBtn.addEventListener("click", function () {
     userWeight.value !== 0 &&
     userAge.value <= 19 &&
     userAge.value >= 2 &&
-    userHeight.value !== 0
+    userHeight.value !== 0 &&
+    gender === "male"
   ) {
     resultBMI =
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
