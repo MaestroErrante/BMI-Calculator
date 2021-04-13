@@ -12,12 +12,14 @@ const reset = document.querySelector(".close-window");
 let inputs = document.querySelectorAll("input");
 let gender;
 let range;
+let heightMts;
 let displayResult;
 let description;
 let moreInfo;
 let extSrc;
 let rangeResult;
 let descrResult;
+let resultBMI;
 
 //Starting Conditions
 userWeight.textContent = 0;
@@ -53,8 +55,8 @@ answerBtn.addEventListener("click", function () {
   openWindow();
   //Formula to calculate BMI for adults
   if (userWeight.value !== 0 && userAge.value >= 20 && userHeight.value !== 0) {
-    let heightMts = userHeight.value / 100;
-    let resultBMI = userWeight.value / (heightMts * heightMts);
+    heightMts = userHeight.value / 100;
+    resultBMI = userWeight.value / (heightMts * heightMts);
     console.log(resultBMI.toFixed(1));
     // Selecting ranges and display result
     //Underweight range
@@ -79,39 +81,6 @@ answerBtn.addEventListener("click", function () {
       funcResults();
     }
 
-    //Create function to display results
-    function funcResults() {
-      //Set range underweight
-      rangeResult = document.createElement("H2");
-      rangeResult.innerHTML = `${range}`;
-      rangeResult.style.color = "#E81D58";
-
-      //Set number result
-      displayResult = document.createElement("H3");
-      displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
-
-      //Set description
-      description = document.createElement("H4");
-      description.innerHTML = `${descrResult}`;
-      description.style.color = "black";
-
-      //Set More Info with link
-      moreInfo = document.createElement("P");
-      moreInfo.innerHTML = `For more information click here: `;
-      moreInfo.classList.add("externalInfo");
-      //Set Link
-      extSrc = document.createElement("a");
-      extSrc.setAttribute("href", "google.com");
-      extSrc.innerHTML = "google.com";
-
-      //Display results
-      document.querySelector(".resultsWindow").appendChild(rangeResult);
-      document.querySelector(".resultsWindow").appendChild(displayResult);
-      document.querySelector(".resultsWindow").appendChild(description);
-      document.querySelector(".resultsWindow").appendChild(moreInfo);
-      document.querySelector(".externalInfo").appendChild(extSrc);
-    }
-
     //Formula to calculate BMI for kids and teens
   } else if (
     userWeight.value !== 0 &&
@@ -119,13 +88,47 @@ answerBtn.addEventListener("click", function () {
     userAge.value >= 2 &&
     userHeight.value !== 0
   ) {
-    let underageBMI =
+    resultBMI =
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
-    console.log(underageBMI.toFixed(1));
-    //Display result
+    console.log(resultBMI.toFixed(1));
+
+    if (resultBMI < 5) {
+      range = "Underweight";
+      funcResults();
+    }
+  }
+
+  //Create function to display results
+  function funcResults() {
+    //Set range underweight
+    rangeResult = document.createElement("H2");
+    rangeResult.innerHTML = `${range}`;
+    rangeResult.style.color = "#E81D58";
+
+    //Set number result
     displayResult = document.createElement("H3");
-    displayResult.innerHTML = `${underageBMI.toFixed(0)}th`;
+    displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
+
+    //Set description
+    description = document.createElement("H4");
+    description.innerHTML = `${descrResult}`;
+    description.style.color = "black";
+
+    //Set More Info with link
+    moreInfo = document.createElement("P");
+    moreInfo.innerHTML = `For more information click here: `;
+    moreInfo.classList.add("externalInfo");
+    //Set Link
+    extSrc = document.createElement("a");
+    extSrc.setAttribute("href", "google.com");
+    extSrc.innerHTML = "google.com";
+
+    //Display results
+    document.querySelector(".resultsWindow").appendChild(rangeResult);
     document.querySelector(".resultsWindow").appendChild(displayResult);
+    document.querySelector(".resultsWindow").appendChild(description);
+    document.querySelector(".resultsWindow").appendChild(moreInfo);
+    document.querySelector(".externalInfo").appendChild(extSrc);
   }
 });
 
