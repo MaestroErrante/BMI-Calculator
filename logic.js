@@ -90,13 +90,19 @@ answerBtn.addEventListener("click", function () {
   ) {
     resultBMI =
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
-    console.log(resultBMI.toFixed(0));
+    console.log(resultBMI.toFixed(1));
 
     if (resultBMI < 5) {
       range = "Underweight";
       funcResults();
     } else if (resultBMI > 5 && resultBMI < 85) {
       range = "Healthy weight";
+      funcResults();
+    } else if (resultBMI > 85 && resultBMI < 95) {
+      range = "Overweight";
+      funcResults();
+    } else if (resultBMI >= 95) {
+      range = "Obese";
       funcResults();
     }
   }
@@ -110,7 +116,7 @@ answerBtn.addEventListener("click", function () {
 
     //Set number result
     displayResult = document.createElement("H3");
-    displayResult.innerHTML = `${resultBMI.toFixed(1)}`;
+    displayResult.innerHTML = `${resultBMI.toFixed(0)}`;
 
     //Set description
     description = document.createElement("H4");
