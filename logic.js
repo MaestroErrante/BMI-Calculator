@@ -10,6 +10,8 @@ const windowResults = document.querySelector(".resultsWindow");
 const overlay = document.querySelector(".overlay");
 const reset = document.querySelector(".close-window");
 let inputs = document.querySelectorAll("input");
+
+//Create variables
 let gender;
 let range;
 let heightMts;
@@ -33,6 +35,7 @@ const openWindow = function () {
 };
 
 // Selecting Gender
+//Male
 maleBtn.addEventListener("click", function () {
   gender = "male";
   if (gender == "male") {
@@ -40,7 +43,7 @@ maleBtn.addEventListener("click", function () {
     femaleBtn.classList.remove("genderClicked");
   }
 });
-
+//Female
 femaleBtn.addEventListener("click", function () {
   gender = "female";
   if (gender == "female") {
@@ -93,15 +96,19 @@ answerBtn.addEventListener("click", function () {
       (userWeight.value / (userHeight.value * userHeight.value)) * 10000;
     console.log(resultBMI.toFixed(1));
 
+    //Underweight range
     if (resultBMI < 5) {
       range = "Underweight";
       funcResults();
+      //Healthy range
     } else if (resultBMI > 5 && resultBMI < 85) {
       range = "Healthy weight";
       funcResults();
+      //Overweight range
     } else if (resultBMI > 85 && resultBMI < 95) {
       range = "Overweight";
       funcResults();
+      //Obese range
     } else if (resultBMI >= 95) {
       range = "Obese";
       funcResults();
@@ -128,6 +135,7 @@ answerBtn.addEventListener("click", function () {
     moreInfo = document.createElement("P");
     moreInfo.innerHTML = `For more information click here: `;
     moreInfo.classList.add("externalInfo");
+
     //Set Link
     extSrc = document.createElement("a");
     extSrc.setAttribute("href", "google.com");
@@ -141,7 +149,7 @@ answerBtn.addEventListener("click", function () {
     document.querySelector(".externalInfo").appendChild(extSrc);
   }
 });
-
+//Function to close window and reset parameters
 const closeWindow = function () {
   windowResults.classList.add("hidden");
   overlay.classList.add("hidden");
@@ -158,7 +166,7 @@ const closeWindow = function () {
   extSrc.remove("a");
 };
 
-//Close window
+//Close window and Reset
 reset.addEventListener("click", function () {
   closeWindow();
 });
