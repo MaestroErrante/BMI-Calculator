@@ -168,6 +168,9 @@ const closeWindow = function () {
   description.remove("H4");
   moreInfo.remove("p");
   extSrc.remove("a");
+  userWeight.removeAttribute("placeholder");
+  userAge.removeAttribute("placeholder");
+  userHeight.removeAttribute("placeholder");
 };
 
 //Close window and Reset
