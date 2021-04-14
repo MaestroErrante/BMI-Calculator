@@ -99,18 +99,22 @@ answerBtn.addEventListener("click", function () {
     //Underweight range
     if (resultBMI < 5) {
       range = "Underweight";
+      descrResult = "Add her a descrption to consult a expert to improve";
       funcResults();
       //Healthy range
     } else if (resultBMI > 5 && resultBMI < 85) {
       range = "Healthy weight";
+      descrResult = "This is the description for the result of healthy weight";
       funcResults();
       //Overweight range
     } else if (resultBMI > 85 && resultBMI < 95) {
       range = "Overweight";
+      descrResult = "This is the description for the result of overweight";
       funcResults();
       //Obese range
     } else if (resultBMI >= 95) {
       range = "Obese";
+      descrResult = "This is the description for the result of obese";
       funcResults();
     }
   }
