@@ -163,11 +163,13 @@ const closeWindow = function () {
     ? maleBtn.classList.remove("genderClicked")
     : femaleBtn.classList.remove("genderClicked");
   gender = "";
+  //Remove results of hidden window
   rangeResult.remove("H2");
   displayResult.remove("H3");
   description.remove("H4");
   moreInfo.remove("p");
   extSrc.remove("a");
+  //Remove Placeholders
   userWeight.removeAttribute("placeholder");
   userAge.removeAttribute("placeholder");
   userHeight.removeAttribute("placeholder");
